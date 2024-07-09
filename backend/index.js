@@ -7,7 +7,7 @@ const orderDataRoute = require('./Routes/OrderData');
 require('dotenv').config();
 
 const app = express();
-const port = 5000;
+const port =process.envPORT || 5000;
 
 app.use(cors({
     origin: 'http://localhost:3000',
