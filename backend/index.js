@@ -10,7 +10,7 @@ const app = express();
 const port =process.envPORT || 5000;
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://food-delivery-webs.onrender.com',
     allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept']
 }));
 
