@@ -44,6 +44,7 @@ export default function Signup() {
       const data = await response.json();
       if (data.success) {
         alert("User created successfully");
+         navigate("/");
       } else {
         alert(data.error || "Error creating user");
       }
