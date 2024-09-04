@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Signup() {
   const [formData, setFormData] = useState({
@@ -9,6 +9,7 @@ export default function Signup() {
     address: ''
   });
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({
@@ -44,7 +45,7 @@ export default function Signup() {
       const data = await response.json();
       if (data.success) {
         alert("User created successfully");
-         navigate("/");
+        navigate("/");
       } else {
         alert(data.error || "Error creating user");
       }
