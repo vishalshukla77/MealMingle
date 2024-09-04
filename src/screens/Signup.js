@@ -45,7 +45,8 @@ export default function Signup() {
       const data = await response.json();
       if (data.success) {
         alert("User created successfully");
-        navigate("/");
+           localStorage.setItem('token', data.authToken)
+        navigate("/login");
       } else {
         alert(data.error || "Error creating user");
       }
