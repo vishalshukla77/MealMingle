@@ -48,7 +48,8 @@ const Card = (props) => {
   return (
     <div>
       <div className="card mt-3" style={{ width: '18rem', maxHeight: '360px' }}>
-        <img src={imageUrl} className="card-img-top" alt="Card image cap" style={{ maxHeight: '120px', objectFit: "fill" }} />
+      <img src={imageUrl} className="card-img-top" alt={foodItem.name} style={{ maxHeight: '120px', objectFit: "fill" }} />
+
         <div className="card-body">
           <h5 className="card-title">{foodItem.name}</h5>
           <div className='container w-100'>
